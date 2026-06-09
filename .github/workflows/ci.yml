@@ -1,0 +1,22 @@
+name: Automotive Software Test CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build_and_run_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Repo se code nikalna
+      uses: actions/checkout@v4
+
+    - name: C++ g++ compiler install karna
+      run: sudo apt-get install -y g++
+
+    - name: Code ko compile karna
+      run: g++ cpp_modify.cpp -o automated_test
+
+    - name: Test code run karna
+      run: ./automated_test
