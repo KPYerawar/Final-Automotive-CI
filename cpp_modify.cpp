@@ -10,7 +10,7 @@ void trigalarm() {
 
 int main() {
     int car_speed = 90;
-    int seatbelt = 1; // 0 matlab seatbelt nahi pehni
+    int seatbelt = 0; // 0 matlab seatbelt nahi pehni
 
     if (car_speed > 80 && seatbelt == 0) {
         trigalarm();
